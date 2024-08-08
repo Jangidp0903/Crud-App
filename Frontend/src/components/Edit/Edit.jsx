@@ -15,7 +15,7 @@ const Edit = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios(`http://localhost:5000/single/${id}`);
+        const res = await axios(`https://crud-app-backend-h5hd.onrender.com/single/${id}`);
         setInput(res.data.data);
       } catch (error) {
         console.log(`Error Fetching Data : ${error}`);
@@ -26,7 +26,7 @@ const Edit = () => {
 
   const handleEdit = async (e) => {
     e.preventDefault();
-    await axios.patch(`http://localhost:5000/edit/${id}`, input);
+    await axios.patch(`https://crud-app-backend-h5hd.onrender.com/edit/${id}`, input);
     navigate("/details");
   };
   return (
