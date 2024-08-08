@@ -9,7 +9,7 @@ const Details = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios("http://localhost:5000/details");
+        const res = await axios("https://crud-app-backend-h5hd.onrender.com/details");
         setUsers(res.data.data);
       } catch (error) {
         console.log(`Error Fetching Data : ${error}`);
@@ -19,7 +19,7 @@ const Details = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/delete/${id}`);
+    await axios.delete(`https://crud-app-backend-h5hd.onrender.com/delete/${id}`);
 
     const newUsers = users.filter((item) => {
       return item._id !== id;
