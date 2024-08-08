@@ -14,7 +14,7 @@ const Add = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/add", input);
+      await axios.post("https://crud-app-backend-h5hd.onrender.com/add", input);
       setInput({
         name: "",
         email: "",
